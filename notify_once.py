@@ -1,5 +1,12 @@
 import ccxt, pandas as pd, numpy as np, os, datetime
 from telegram import Bot
+import ccxt
+
+# Statt:
+# BINANCE = ccxt.binance()
+
+# Nutze z. B. Bybit oder OKX:
+BINANCE = ccxt.bybit()  # oder ccxt.okx()
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
